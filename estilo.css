@@ -624,150 +624,175 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-@media screen and (max-width: 768px) {
-    /* General: Añadir márgenes a todo el contenido */
-    body {
-        padding: 0 20px; /* Añadir espacio a los bordes */
-        font-size: 16px; /* Ajuste de tamaño de fuente */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*--- Sección Inicio y presentaciones ---*/
+#inicio .contenido .presentacion h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #inicio .contenido .presentacion h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
     }
 
-    /* Encabezado (inicio, objetivos, servicios, etc.) */
-    header {
-        width: 90%; /* Hacer el encabezado más estrecho */
-        margin: 0 auto;
-    }
-
-    header nav ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: column; /* Mostrar los enlaces de forma vertical */
-        align-items: center;
-        margin: 0;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    header nav ul li a {
-        font-size: 18px;
-        text-align: center;
-        padding: 8px;
-        display: block;
-    }
-
-    /* Imagen "Bienvenidos" */
-    .bienvenidos img {
-        width: 100%;
-        height: auto;
-        margin-top: 20px; /* Mejor separación */
-    }
-
-    /* Sección Objetivos */
-    #objetivos {
-        display: block;
-        text-align: center;
-        padding: 0 10px; /* Espaciado en los laterales */
-    }
-
-    #objetivos ul {
-        padding: 0;
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Mostrar en dos columnas */
-        gap: 10px;
-    }
-
-    #objetivos li {
+    .bienvenida {
         font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        letter-spacing: 2px;
     }
 
-    #objetivos img {
-        width: 90%; /* Hacer que las imágenes de objetivos sean más grandes */
-        height: auto;
-        margin-top: 10px;
-        max-height: 250px; /* Limitar la altura máxima de las imágenes */
-    }
-
-    /* Ajustes a la tabla de Servicios de Sostenibilidad */
-    #servicios .tabla-contenedor {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Para desplazamiento en dispositivos táctiles */
-    }
-
-    #servicios table {
-        width: 100%;
-        font-size: 14px; /* Reducir el tamaño de la fuente */
-        margin: 10px 0;
-        border-collapse: collapse;
-    }
-
-    #servicios th, #servicios td {
-        padding: 10px;
+    /* Ajustar el contenido de la presentación */
+    .descripcion {
+        font-size: 16px;
         text-align: center;
-        border: 1px solid #ccc;
+        padding: 0 15px;
     }
 
-    #servicios th {
-        background-color: #62da3e;
-        color: white;
-    }
-
-    #servicios td {
-        word-wrap: break-word; /* Permite el ajuste de palabras largas */
-    }
-
-    /* Proyectos */
-    #proyectos {
-        display: block;
-        padding: 20px 0;
-    }
-
-    #proyectos img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    /* Ajustes de los márgenes generales */
-    section {
-        margin-bottom: 20px;
+    /* Botones */
+    #inicio .contenido .presentacion a {
+        padding: 12px 20px;
     }
 }
 
-/* Ajustes para pantallas más pequeñas (menos de 480px) */
-@media screen and (max-width: 480px) {
-    /* Reducir aún más los tamaños de fuente */
-    body {
+/* Sección de Servicios */
+#servicios {
+    background-color: #f3f3f3;
+    padding: 80px 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    td {
         font-size: 14px;
+        padding: 10px;
     }
 
-    header nav ul li a {
-        font-size: 16px;
+    .icono {
+        width: 45px;
+        height: 45px;
     }
 
-    #servicios table {
-        font-size: 12px; /* Más pequeño para pantallas muy pequeñas */
+    .servicio h4 {
+        font-size: 18px;
     }
 
-    /* Mejorar los márgenes en las secciones */
-    section {
+    .servicio p {
+        font-size: 12px;
+    }
+
+    /* Ajuste de las etiquetas de servicios */
+    .servicios-tag {
+        flex-direction: column;
         margin-bottom: 10px;
     }
 
-    /* Ajustes adicionales para la sección de objetivos */
-    #objetivos ul {
-        grid-template-columns: 1fr; /* Cambiar a una columna para pantallas muy pequeñas */
+    .servicios-tag li {
+        margin-bottom: 8px;
+    }
+}
+
+/* Sección de Portafolio */
+#portfolio .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Esto permite que los proyectos se ajusten en pantallas pequeñas */
+}
+
+@media screen and (max-width: 768px) {
+    #portfolio .fila {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #objetivos img {
-        width: 100%; /* Asegurar que las imágenes ocupen todo el espacio disponible */
-        max-height: none; /* Eliminar límite de altura */
+    #portfolio .fila .proyecto {
+        margin-bottom: 15px;
+        width: 90%; /* Cambiar de 450px a un porcentaje para que ocupe el 90% del ancho */
+    }
+
+    .proyecto img {
+        max-width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+        height: auto; /* Mantiene la proporción */
+    }
+}
+
+/* Sección de Contacto */
+#contacto .contenedor-form .mitad input,
+#contacto .contenedor-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    #contacto .contenedor-form .mitad input {
+        width: 100%; /* Asegura que los campos de texto sean más grandes en móviles */
+    }
+
+    .btn-enviar {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Sección Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    /* Reducir márgenes y tamaños de fuente en móviles */
+    .titulo-seccion {
+        font-size: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.responsive {
+        display: block;
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav.responsive ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
+    }
+
+    #icono-nav {
+        display: block;
     }
 }
