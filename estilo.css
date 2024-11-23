@@ -625,66 +625,83 @@ footer a {
 /* Sección RESPONSIVE */
 
 @media screen and (max-width: 768px) {
-    /* Ajustes generales para el contenido principal */
+    /* General: Añadir márgenes a todo el contenido */
     body {
-        padding: 0 10px; /* Reducir los márgenes en los lados */
-        font-size: 14px; /* Ajustar tamaño de fuente */
+        padding: 0 15px; /* Espaciado en los bordes */
+        font-size: 16px; /* Ajuste de tamaño de fuente */
     }
 
-    /* Encabezado (Inicio, Objetivos, Servicios, etc.) */
+    /* Encabezado (inicio, objetivos, servicios, etc.) */
     header nav ul {
         padding: 0;
         list-style: none;
         display: flex;
-        flex-direction: column; /* Cambio de horizontal a vertical */
+        flex-direction: column; /* Mostrar los enlaces de forma vertical */
         align-items: center;
         margin: 0;
     }
+
     header nav ul li {
         margin: 10px 0;
     }
+
     header nav ul li a {
         font-size: 18px;
         text-align: center;
-        padding: 5px;
+        padding: 8px;
+        display: block;
     }
 
-    /* Ajustes para la imagen de la sección "Bienvenidos" */
+    /* Imagen "Bienvenidos" */
     .bienvenidos img {
         width: 100%;
         height: auto;
-        margin-top: 20px;
+        margin-top: 20px; /* Mejor separación */
     }
 
-    /* Ajustes de la sección "Objetivos" */
+    /* Sección Objetivos */
+    #objetivos {
+        display: block;
+        text-align: center;
+        padding: 0 10px; /* Espaciado en los laterales */
+    }
+
     #objetivos ul {
         padding: 0;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dividir en dos columnas */
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr); /* Mostrar en dos columnas */
+        gap: 10px;
     }
+
     #objetivos li {
-        text-align: center;
         font-size: 14px;
     }
+
     #objetivos img {
         width: 100%;
         height: auto;
+        margin-top: 10px;
     }
 
-    /* Ajuste para la tabla de "Servicios de Sostenibilidad" */
+    /* Ajustes a la tabla de Servicios de Sostenibilidad */
+    #servicios .tabla-contenedor {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Para desplazamiento en dispositivos táctiles */
+    }
+
     #servicios table {
         width: 100%;
+        font-size: 14px; /* Reducir el tamaño de la fuente */
         margin: 10px 0;
-        font-size: 12px;
         border-collapse: collapse;
     }
 
-    #servicios td, #servicios th {
-        padding: 8px;
-        border: 1px solid #ccc;
+    #servicios th, #servicios td {
+        padding: 10px;
         text-align: center;
+        border: 1px solid #ccc;
     }
 
     #servicios th {
@@ -692,52 +709,45 @@ footer a {
         color: white;
     }
 
-    /* Permitir desplazamiento horizontal si la tabla es más grande que la pantalla */
-    #servicios .tabla-contenedor {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Ajuste de texto dentro de las celdas para que no se desborde */
     #servicios td {
-        word-wrap: break-word;
+        word-wrap: break-word; /* Permite el ajuste de palabras largas */
     }
 
-    /* Ajustes de la sección "Proyectos" */
+    /* Proyectos */
     #proyectos {
+        display: block;
         padding: 20px 0;
     }
+
     #proyectos img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
     }
 
-    /* Ajustes de márgenes y espaciado general */
+    /* Ajustes de los márgenes generales */
     section {
         margin-bottom: 20px;
     }
-
-    /* Mejorar el espacio entre secciones */
-    .contenedor {
-        padding: 0 10px;
-    }
 }
 
-/* Estilos adicionales para otros tamaños si es necesario */
+/* Ajustes para pantallas más pequeñas (menos de 480px) */
 @media screen and (max-width: 480px) {
-    /* Reducir tamaño de texto y márgenes aún más para pantallas pequeñas */
+    /* Reducir aún más los tamaños de fuente */
+    body {
+        font-size: 14px;
+    }
+
     header nav ul li a {
         font-size: 16px;
     }
 
-    /* Ajustar la imagen de la sección Bienvenidos */
-    .bienvenidos img {
-        margin-top: 10px;
+    #servicios table {
+        font-size: 12px; /* Más pequeño para pantallas muy pequeñas */
     }
 
-    /* Reducir el tamaño de la tabla */
-    #servicios table {
-        font-size: 11px; /* Más pequeño para pantallas muy pequeñas */
+    /* Mejorar los márgenes en las secciones */
+    section {
+        margin-bottom: 10px;
     }
 }
