@@ -624,155 +624,95 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-    @media screen and (max-width: 80px) {
-      .redes {
-        display: none;
-      }
+   /* Media Queries para pantallas de tamaño mediano y pequeño */
 
-      .redes1 {
-        display: none;
+/* Pantallas grandes */
+@media screen and (max-width: 1024px) {
+    /* Estilos para tabletas y pantallas más pequeñas (menores de 1024px) */
+    header {
+        padding: 15px 0;
     }
-   
-      nav {
-        display: none;
-      }
-   
-nav.responsive {
-        display: block;
-        background-color: rgba(0, 0, 0, .8);
-        width: 100%;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        padding: 10px 0;
 
-}
-   
-nav.responsive ul {
-        display: block !important;
+    nav ul {
+        flex-direction: column; /* En lugar de horizontal, los elementos de navegación se apilan */
         text-align: center;
+    }
 
-}
-   
-nav.responsive ul li {
-        margin: 5px 0;
-
-}
-   
-#icono-nav {
-        display: block;
-
-}
-   
-#inicio .contenido .presentacion h2 {
+    /* Ajustes específicos para pantallas más pequeñas */
+    #inicio .contenido .presentacion h2 {
         font-size: 40px;
-
+    }
 }
 
-/* Sección OJETIVOS */
-
-#sobremi {
-        padding: 50px 0;
-        display: block;
-
-}
-   
-#sobremi .contenedor-foto {
-        max-width: 200px;
-        margin: auto;
-
-}
-   
-#sobremi .contenedor-foto img {
-        padding: 8px;
-}
-   
-#sobremi .sobremi .titulo-seccion {
-        text-align: center;
-
-}
-   
-#sobremi .sobremi h2 {
-        font-size: 25px;
-        text-align: center;
-
-}
-   
-/* Sección SERVICIOS */
-
+/* Pantallas pequeñas */
 @media screen and (max-width: 768px) {
-    table {
-        width: 100%;
-        margin: 15px;
+    /* Estilos para móviles y pantallas más pequeñas */
+    body {
+        font-size: 14px; /* Reducir el tamaño de fuente */
     }
 
-    td {
-        font-size: 14px;
-        padding: 10px;
+    header {
+        padding: 10px 0;
     }
 
-    .icono {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        padding-top: 5px;
+    nav ul {
+        flex-direction: column;
+        padding: 0;
     }
 
-    .servicio h4 {
-        font-size: 18px;
+    #inicio .contenido .presentacion h2 {
+        font-size: 35px;
+        text-align: center;
     }
 
-    .servicio p {
+    .bienvenida {
         font-size: 12px;
     }
 
-    .servicios-tag li {
-        margin-right: 5px;
+    .descripcion {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btn-enviar {
+        padding: 12px 20px;
+    }
+
+    /* Ajuste para que los campos de formulario se adapten al ancho */
+    #contacto .contenedor-form .mitad input {
+        width: 100%;
     }
 }
-   
-/* Sección VIDEO*/
 
-.contenedor-video {
-        padding: 50px 20px;
+/* Pantallas extra pequeñas (móviles muy pequeños) */
+@media screen and (max-width: 480px) {
+    /* Estilos para pantallas aún más pequeñas */
+    body {
+        font-size: 12px;
+    }
 
-}
-   
-/* Sección PORTFOLIO */
-
-#portfolio {
-        padding: 50px 0;
-
-}
-   
-#portfolio .fila {
+    nav.responsive {
         display: block;
-
-}
-   
-#portfolio .fila .proyecto {
-        margin: 10px auto;
-
-}
-   
-/* Sección CONTACTO */
-
-#contacto {
-        padding: 50px 15px;
-
-}
-   
-#contacto .contenedor-form .mitad {
-        margin-bottom: 15px;
-        display: block;
-
-}
-   
-#contacto .contenedor-form .mitad input {
+        background-color: rgba(0, 0, 0, .8);
+        position: absolute;
+        top: 50px;
+        left: 0;
         width: 100%;
-        margin-bottom: 15px;
+    }
 
-}
+    nav.responsive ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
+    }
+
+    .proyecto img {
+        max-width: 100%;
+        height: auto;
+    }
 }
   
   
