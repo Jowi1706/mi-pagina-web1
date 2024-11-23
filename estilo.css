@@ -624,158 +624,26 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/*--- Sección Inicio y presentaciones ---*/
-#inicio .contenido .presentacion h2 {
-    font-size: 50px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    #inicio .contenido .presentacion h2 {
-        font-size: 40px;
-        margin-bottom: 15px;
-    }
-
-    .bienvenida {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
-    /* Ajustar el contenido de la presentación */
-    .descripcion {
-        font-size: 16px;
+/* Sección HEADER */
+@media screen and (max-width: 768px) {
+    #inicio .contenido header .contenido-header h1,
+    #inicio2 .contenido header .contenido-header h1 {
+        font-size: 24px; /* Ajuste tamaño de texto del header */
         text-align: center;
-        padding: 0 15px;
     }
 
-    /* Botones */
-    #inicio .contenido .presentacion a {
-        padding: 12px 20px;
-    }
-}
-
-/* Sección de Servicios */
-#servicios {
-    background-color: #f3f3f3;
-    padding: 80px 15px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td {
-    padding: 15px;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-
-@media screen and (max-width: 768px) {
-    td {
-        font-size: 14px;
-        padding: 10px;
+    #inicio .contenido header .contenido-header nav ul,
+    #inicio2 .contenido header .contenido-header nav ul {
+        display: none; /* Oculta los menús de navegación por defecto */
     }
 
-    .icono {
-        width: 45px;
-        height: 45px;
-    }
-
-    .servicio h4 {
-        font-size: 18px;
-    }
-
-    .servicio p {
-        font-size: 12px;
-    }
-
-    /* Ajuste de las etiquetas de servicios */
-    .servicios-tag {
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
-    .servicios-tag li {
-        margin-bottom: 8px;
-    }
-}
-
-/* Sección de Portafolio */
-#portfolio .fila {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Esto permite que los proyectos se ajusten en pantallas pequeñas */
-}
-
-@media screen and (max-width: 768px) {
-    #portfolio .fila {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #portfolio .fila .proyecto {
-        margin-bottom: 15px;
-        width: 90%; /* Cambiar de 450px a un porcentaje para que ocupe el 90% del ancho */
-    }
-
-    .proyecto img {
-        max-width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-        height: auto; /* Mantiene la proporción */
-    }
-}
-
-/* Sección de Contacto */
-#contacto .contenedor-form .mitad input,
-#contacto .contenedor-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-@media screen and (max-width: 768px) {
-    #contacto .contenedor-form .mitad input {
-        width: 100%; /* Asegura que los campos de texto sean más grandes en móviles */
-    }
-
-    .btn-enviar {
-        padding: 12px 25px;
-        font-size: 14px;
-    }
-}
-
-/* Sección Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 15px;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 480px) {
-    /* Reducir márgenes y tamaños de fuente en móviles */
-    .titulo-seccion {
-        font-size: 20px;
-    }
-
-    nav {
-        display: none;
+    #icono-nav {
+        display: block; /* Muestra el icono del menú hamburguesa */
     }
 
     nav.responsive {
         display: block;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
         position: absolute;
         top: 48px;
@@ -784,7 +652,7 @@ footer {
     }
 
     nav.responsive ul {
-        display: block;
+        display: block !important;
         text-align: center;
     }
 
@@ -792,7 +660,133 @@ footer {
         margin: 5px 0;
     }
 
-    #icono-nav {
+    /* Ajuste en el texto de bienvenida */
+    #inicio .contenido .presentacion h2 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    #inicio .contenido .presentacion .descripcion,
+    #inicio2 .contenido .presentacion .descripcion {
+        font-size: 16px;
+        margin: 20px 10px;
+    }
+
+    /* Sección Objetivos */
+    #SOBREMI .contenedor-foto {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #SOBREMI .sobremi {
+        margin: 0 20px;
+    }
+
+    #SOBREMI .sobremi .titulo-seccion {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #SOBREMI .sobremi h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #SOBREMI .sobremi p {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    /* Ajustes en la tabla de Servicios */
+    #servicios table {
+        width: 100%;
+        overflow-x: auto;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+    #servicios td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .icono {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .servicios-tag li {
+        margin-right: 5px;
+    }
+
+    /* Ajustes en el Portfolio */
+    #portfolio .fila {
         display: block;
+        margin: 20px 0;
+    }
+
+    #portfolio .fila .proyecto {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    #portfolio .fila .proyecto img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(1);
+        object-fit: cover;
+    }
+
+    #portfolio .fila .proyecto:hover img {
+        filter: grayscale(0);
+    }
+
+    #portfolio .fila .proyecto .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #62da3e;
+        width: 100%;
+        padding: 10px;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    #portfolio .fila .proyecto:hover .info {
+        opacity: 1;
+    }
+
+    /* Ajustes en la Sección Contacto */
+    #contacto .contenedor-form .mitad input,
+    #contacto .contenedor-form .mitad textarea {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #contacto .btn-enviar {
+        width: 100%;
+        padding: 15px;
+        background-color: #62da3e;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    #contacto .btn-enviar:hover {
+        background-color: #45b028;
+    }
+
+    /* Ajustes en el Footer */
+    footer {
+        padding: 20px;
+    }
+
+    footer a {
+        font-size: 18px;
     }
 }
