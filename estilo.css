@@ -624,97 +624,109 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-   /* Media Queries para pantallas de tamaño mediano y pequeño */
-
-/* Pantallas grandes */
-@media screen and (max-width: 1024px) {
-    /* Estilos para tabletas y pantallas más pequeñas (menores de 1024px) */
-    header {
-        padding: 15px 0;
-    }
-
-    nav ul {
-        flex-direction: column; /* En lugar de horizontal, los elementos de navegación se apilan */
-        text-align: center;
-    }
-
-    /* Ajustes específicos para pantallas más pequeñas */
-    #inicio .contenido .presentacion h2 {
-        font-size: 40px;
-    }
-}
-
-/* Pantallas pequeñas */
+/* 1. Encabezado (Inicio, Objetivos, Servicios, Portfolio, Contactos) */
 @media screen and (max-width: 768px) {
-    /* Estilos para móviles y pantallas más pequeñas */
-    body {
-        font-size: 14px; /* Reducir el tamaño de fuente */
+    /* Ajustar el encabezado de las secciones */
+    #inicio .contenido header .contenido-header,
+    #inicio2 .contenido header .contenido-header {
+        flex-direction: column; /* Para que los elementos se alineen verticalmente */
+        text-align: center; /* Centra el texto */
     }
 
-    header {
-        padding: 10px 0;
+    #inicio .contenido header .contenido-header h1,
+    #inicio2 .contenido header .contenido-header h1 {
+        font-size: 24px; /* Ajustar tamaño de texto para pantallas pequeñas */
+        margin-bottom: 10px;
     }
 
-    nav ul {
-        flex-direction: column;
-        padding: 0;
+    #inicio .contenido header .contenido-header nav ul,
+    #inicio2 .contenido header .contenido-header nav ul {
+        flex-direction: column; /* Los enlaces se muestran de forma vertical */
+        margin-top: 10px;
     }
 
-    #inicio .contenido .presentacion h2 {
-        font-size: 35px;
-        text-align: center;
-    }
-
-    .bienvenida {
-        font-size: 12px;
-    }
-
-    .descripcion {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .btn-enviar {
-        padding: 12px 20px;
-    }
-
-    /* Ajuste para que los campos de formulario se adapten al ancho */
-    #contacto .contenedor-form .mitad input {
-        width: 100%;
+    #inicio .contenido header .contenido-header nav ul li a,
+    #inicio2 .contenido header .contenido-header nav ul li a {
+        margin: 10px 0;
+        font-size: 18px; /* Ajustar tamaño de fuente de los enlaces */
     }
 }
 
-/* Pantallas extra pequeñas (móviles muy pequeños) */
-@media screen and (max-width: 480px) {
-    /* Estilos para pantallas aún más pequeñas */
-    body {
-        font-size: 12px;
+/* 2. Texto de Bienvenida (Inicio) */
+@media screen and (max-width: 768px) {
+    #inicio .contenido .presentacion .bienvenida,
+    #inicio2 .contenido .presentacion .bienvenida {
+        margin: 0 15px; /* Añadir margen lateral */
+        font-size: 14px; /* Ajustar tamaño de texto */
     }
+}
 
-    nav.responsive {
-        display: block;
-        background-color: rgba(0, 0, 0, .8);
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav.responsive ul {
-        display: block;
-        text-align: center;
-    }
-
-    nav.responsive ul li {
-        margin: 5px 0;
-    }
-
-    .proyecto img {
+/* 3. Foto en Objetivos */
+@media screen and (max-width: 768px) {
+    /* Ajustar la foto de objetivos */
+    #SOBREMI .contenedor-foto {
         max-width: 100%;
-        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px; /* Añadir espacio debajo de la foto */
+    }
+
+    #SOBREMI .contenedor-foto img {
+        width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible */
+        margin-top: 0; /* Eliminar margen superior */
+    }
+
+    #SOBREMI .sobremi {
+        margin: 20px 10px; /* Reducir el margen en pantallas pequeñas */
+    }
+
+    /* Ajustar la lista debajo de la foto */
+    #SOBREMI .sobremi ul {
+        padding-left: 20px; /* Añadir espacio para la lista */
     }
 }
-  
+
+/* 4. Tabla en la sección de Servicios */
+@media screen and (max-width: 768px) {
+    /* Ajustar la tabla de servicios */
+    #servicios table {
+        width: 100%;
+        overflow-x: auto; /* Hacer que la tabla sea desplazable horizontalmente */
+        margin: 20px 0;
+    }
+
+    #servicios td {
+        font-size: 14px; /* Ajustar el tamaño de la fuente */
+        padding: 10px;
+    }
+
+    .icono {
+        width: 40px; /* Reducir tamaño del icono */
+        height: 40px;
+    }
+}
+
+/* 5. Imágenes de los proyectos en Portfolio */
+@media screen and (max-width: 768px) {
+    /* Ajustar las imágenes del portfolio */
+    #portfolio .fila {
+        flex-direction: column; /* Los proyectos se apilan verticalmente */
+    }
+
+    #portfolio .fila .proyecto {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    #portfolio .fila .proyecto img {
+        width: 100%; /* Hacer las imágenes más grandes */
+        height: auto; /* Mantener la proporción */
+    }
+
+    #portfolio .fila .proyecto .info {
+        bottom: 0;
+        padding: 15px;
+    }
+}
   
   
 
