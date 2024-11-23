@@ -625,155 +625,119 @@ footer a {
 /* Sección RESPONSIVE */
 
 @media screen and (max-width: 768px) {
-    /* Encabezado de Inicio - Mejora espaciado */
-    #inicio .contenido header .contenido-header h1,
-    #inicio2 .contenido header .contenido-header h1 {
-        font-size: 24px; /* Ajuste tamaño de texto del header */
+    /* Ajustes generales para el contenido principal */
+    body {
+        padding: 0 10px; /* Reducir los márgenes en los lados */
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+
+    /* Encabezado (Inicio, Objetivos, Servicios, etc.) */
+    header nav ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Cambio de horizontal a vertical */
+        align-items: center;
+        margin: 0;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    header nav ul li a {
+        font-size: 18px;
         text-align: center;
-        padding: 0 15px; /* Añadir espacio a los lados */
+        padding: 5px;
     }
 
-    #inicio .contenido header .contenido-header nav ul,
-    #inicio2 .contenido header .contenido-header nav ul {
-        display: none; /* Ocultar los menús de navegación */
-    }
-
-    #icono-nav {
-        display: block; /* Mostrar el icono del menú hamburguesa */
-    }
-
-    nav.responsive {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.8);
+    /* Ajustes para la imagen de la sección "Bienvenidos" */
+    .bienvenidos img {
         width: 100%;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    nav.responsive ul {
-        display: block !important;
-        text-align: center;
-    }
-
-    nav.responsive ul li {
-        margin: 5px 0;
-    }
-
-    /* Ajuste en el texto de bienvenida */
-    #inicio .contenido .presentacion h2 {
-        font-size: 30px; /* Reducir tamaño para no apretar el espacio */
-        text-align: center;
-        margin: 0 10px;
-    }
-
-    #inicio .contenido .presentacion .descripcion {
-        font-size: 16px;
-        margin: 20px 0;
-        padding: 0 20px; /* Asegurar que no se pegue a los bordes */
-    }
-
-    /* Sección Objetivos */
-    #SOBREMI .sobremi .objetivos-lista {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Crear dos columnas */
-        gap: 10px;
-        padding: 0 20px; /* Añadir espaciado a los lados */
+        height: auto;
         margin-top: 20px;
     }
 
-    #SOBREMI .sobremi .objetivos-lista li {
+    /* Ajustes de la sección "Objetivos" */
+    #objetivos ul {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dividir en dos columnas */
+        gap: 20px;
+    }
+    #objetivos li {
+        text-align: center;
         font-size: 14px;
     }
-
-    #SOBREMI .sobremi h2 {
-        font-size: 30px;
-        text-align: center;
+    #objetivos img {
+        width: 100%;
+        height: auto;
     }
 
-    #SOBREMI .sobremi p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    /* Reposicionar la imagen de Objetivos */
-    #SOBREMI .contenedor-foto {
-        max-width: 100%;
-        margin: 0 auto 20px;
-    }
-
-    /* Ajustar la tabla de Servicios */
+    /* Ajuste para la tabla de "Servicios de Sostenibilidad" */
     #servicios table {
         width: 100%;
-        overflow-x: auto;
         margin: 10px 0;
-        font-size: 14px;
+        font-size: 12px;
         border-collapse: collapse;
     }
 
     #servicios td, #servicios th {
-        padding: 10px;
+        padding: 8px;
         border: 1px solid #ccc;
+        text-align: center;
     }
 
-    /* Ajustes en el Portfolio */
-    #portfolio .fila {
-        display: block;
-        margin: 20px 0;
-    }
-
-    #portfolio .fila .proyecto img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        filter: grayscale(1);
-    }
-
-    #portfolio .fila .proyecto .info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #62da3e;
-        width: 100%;
-        padding: 10px;
-        opacity: 0;
-        transition: .5s;
-    }
-
-    #portfolio .fila .proyecto:hover .info {
-        opacity: 1;
-    }
-
-    /* Ajustes en el Contacto */
-    #contacto .contenedor-form .mitad input,
-    #contacto .contenedor-form .mitad textarea {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    #contacto .btn-enviar {
-        width: 100%;
-        padding: 15px;
+    #servicios th {
         background-color: #62da3e;
         color: white;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
     }
 
-    #contacto .btn-enviar:hover {
-        background-color: #45b028;
+    /* Permitir desplazamiento horizontal si la tabla es más grande que la pantalla */
+    #servicios .tabla-contenedor {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* Ajustes en el Footer */
-    footer {
-        padding: 20px;
+    /* Ajuste de texto dentro de las celdas para que no se desborde */
+    #servicios td {
+        word-wrap: break-word;
     }
 
-    footer a {
-        font-size: 18px;
+    /* Ajustes de la sección "Proyectos" */
+    #proyectos {
+        padding: 20px 0;
+    }
+    #proyectos img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes de márgenes y espaciado general */
+    section {
+        margin-bottom: 20px;
+    }
+
+    /* Mejorar el espacio entre secciones */
+    .contenedor {
+        padding: 0 10px;
     }
 }
 
+/* Estilos adicionales para otros tamaños si es necesario */
+@media screen and (max-width: 480px) {
+    /* Reducir tamaño de texto y márgenes aún más para pantallas pequeñas */
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Ajustar la imagen de la sección Bienvenidos */
+    .bienvenidos img {
+        margin-top: 10px;
+    }
+
+    /* Reducir el tamaño de la tabla */
+    #servicios table {
+        font-size: 11px; /* Más pequeño para pantallas muy pequeñas */
+    }
+}
