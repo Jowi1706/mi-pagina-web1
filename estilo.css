@@ -624,109 +624,170 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-/* 1. Encabezado (Inicio, Objetivos, Servicios, Portfolio, Contactos) */
 @media screen and (max-width: 768px) {
-    /* Ajustar el encabezado de las secciones */
-    #inicio .contenido header .contenido-header,
-    #inicio2 .contenido header .contenido-header {
-        flex-direction: column; /* Para que los elementos se alineen verticalmente */
-        text-align: center; /* Centra el texto */
-    }
-
     #inicio .contenido header .contenido-header h1,
     #inicio2 .contenido header .contenido-header h1 {
-        font-size: 24px; /* Ajustar tamaño de texto para pantallas pequeñas */
-        margin-bottom: 10px;
+        font-size: 24px; /* Ajuste tamaño de texto del header */
+        text-align: center;
     }
 
     #inicio .contenido header .contenido-header nav ul,
     #inicio2 .contenido header .contenido-header nav ul {
-        flex-direction: column; /* Los enlaces se muestran de forma vertical */
-        margin-top: 10px;
+        display: none; /* Oculta los menús de navegación por defecto */
     }
 
-    #inicio .contenido header .contenido-header nav ul li a,
-    #inicio2 .contenido header .contenido-header nav ul li a {
-        margin: 10px 0;
-        font-size: 18px; /* Ajustar tamaño de fuente de los enlaces */
+    #icono-nav {
+        display: block; /* Muestra el icono del menú hamburguesa */
     }
-}
 
-/* 2. Texto de Bienvenida (Inicio) */
-@media screen and (max-width: 768px) {
-    #inicio .contenido .presentacion .bienvenida,
-    #inicio2 .contenido .presentacion .bienvenida {
-        margin: 0 15px; /* Añadir margen lateral */
-        font-size: 14px; /* Ajustar tamaño de texto */
+    nav.responsive {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
     }
-}
 
-/* 3. Foto en Objetivos */
-@media screen and (max-width: 768px) {
-    /* Ajustar la foto de objetivos */
+    nav.responsive ul {
+        display: block !important;
+        text-align: center;
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
+    }
+
+    /* Ajuste en el texto de bienvenida */
+    #inicio .contenido .presentacion h2 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    #inicio .contenido .presentacion .descripcion,
+    #inicio2 .contenido .presentacion .descripcion {
+        font-size: 16px;
+        margin: 20px 10px;
+    }
+
+    /* Sección Objetivos */
     #SOBREMI .contenedor-foto {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px; /* Añadir espacio debajo de la foto */
-    }
-
-    #SOBREMI .contenedor-foto img {
-        width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible */
-        margin-top: 0; /* Eliminar margen superior */
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     #SOBREMI .sobremi {
-        margin: 20px 10px; /* Reducir el margen en pantallas pequeñas */
+        margin: 0 20px;
     }
 
-    /* Ajustar la lista debajo de la foto */
-    #SOBREMI .sobremi ul {
-        padding-left: 20px; /* Añadir espacio para la lista */
+    #SOBREMI .sobremi .titulo-seccion {
+        text-align: center;
+        font-size: 18px;
     }
-}
 
-/* 4. Tabla en la sección de Servicios */
-@media screen and (max-width: 768px) {
-    /* Ajustar la tabla de servicios */
+    #SOBREMI .sobremi h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #SOBREMI .sobremi p {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    /* Ajustes en la tabla de Servicios */
     #servicios table {
         width: 100%;
-        overflow-x: auto; /* Hacer que la tabla sea desplazable horizontalmente */
-        margin: 20px 0;
+        overflow-x: auto;
+        margin: 10px 0;
+        font-size: 12px;
     }
 
     #servicios td {
-        font-size: 14px; /* Ajustar el tamaño de la fuente */
         padding: 10px;
+        font-size: 14px;
     }
 
     .icono {
-        width: 40px; /* Reducir tamaño del icono */
+        width: 40px;
         height: 40px;
+        margin: 0 auto;
     }
-}
 
-/* 5. Imágenes de los proyectos en Portfolio */
-@media screen and (max-width: 768px) {
-    /* Ajustar las imágenes del portfolio */
+    .servicios-tag li {
+        margin-right: 5px;
+    }
+
+    /* Ajustes en el Portfolio */
     #portfolio .fila {
-        flex-direction: column; /* Los proyectos se apilan verticalmente */
+        display: block;
+        margin: 20px 0;
     }
 
     #portfolio .fila .proyecto {
-        max-width: 100%;
-        margin: 15px 0;
+        width: 100%;
+        margin: 10px auto;
     }
 
     #portfolio .fila .proyecto img {
-        width: 100%; /* Hacer las imágenes más grandes */
-        height: auto; /* Mantener la proporción */
+        width: 100%;
+        height: auto;
+        filter: grayscale(1);
+        object-fit: cover;
+    }
+
+    #portfolio .fila .proyecto:hover img {
+        filter: grayscale(0);
     }
 
     #portfolio .fila .proyecto .info {
+        position: absolute;
         bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #62da3e;
+        width: 100%;
+        padding: 10px;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    #portfolio .fila .proyecto:hover .info {
+        opacity: 1;
+    }
+
+    /* Ajustes en la Sección Contacto */
+    #contacto .contenedor-form .mitad input,
+    #contacto .contenedor-form .mitad textarea {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #contacto .btn-enviar {
+        width: 100%;
         padding: 15px;
+        background-color: #62da3e;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    #contacto .btn-enviar:hover {
+        background-color: #45b028;
+    }
+
+    /* Ajustes en el Footer */
+    footer {
+        padding: 20px;
+    }
+
+    footer a {
+        font-size: 18px;
     }
 }
-  
   
 
