@@ -624,19 +624,18 @@ footer a {
 
 /* Sección RESPONSIVE */
 
-/* Sección HEADER */
 @media screen and (max-width: 768px) {
-    /* Encabezado de Inicio */
+    /* Encabezado de Inicio - Mejora espaciado */
     #inicio .contenido header .contenido-header h1,
     #inicio2 .contenido header .contenido-header h1 {
         font-size: 24px; /* Ajuste tamaño de texto del header */
         text-align: center;
-        padding: 0 15px; /* Espaciado para que no se pegue a los bordes */
+        padding: 0 15px; /* Añadir espacio a los lados */
     }
 
     #inicio .contenido header .contenido-header nav ul,
     #inicio2 .contenido header .contenido-header nav ul {
-        display: none; /* Ocultar los menús de navegación por defecto */
+        display: none; /* Ocultar los menús de navegación */
     }
 
     #icono-nav {
@@ -664,40 +663,28 @@ footer a {
 
     /* Ajuste en el texto de bienvenida */
     #inicio .contenido .presentacion h2 {
-        font-size: 40px;
+        font-size: 30px; /* Reducir tamaño para no apretar el espacio */
         text-align: center;
         margin: 0 10px;
-        padding: 0 15px; /* Evitar que el texto toque los bordes */
     }
 
-    #inicio .contenido .presentacion .descripcion,
-    #inicio2 .contenido .presentacion .descripcion {
+    #inicio .contenido .presentacion .descripcion {
         font-size: 16px;
-        margin: 20px 10px;
-        padding: 0 15px; /* Asegurar que no se pegue a los bordes */
+        margin: 20px 0;
+        padding: 0 20px; /* Asegurar que no se pegue a los bordes */
     }
 
     /* Sección Objetivos */
-    #SOBREMI .contenedor-foto {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    /* Dividir la lista en dos columnas */
     #SOBREMI .sobremi .objetivos-lista {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 15px; /* Para evitar que se pegue al borde */
+        grid-template-columns: 1fr 1fr; /* Crear dos columnas */
+        gap: 10px;
+        padding: 0 20px; /* Añadir espaciado a los lados */
+        margin-top: 20px;
     }
 
     #SOBREMI .sobremi .objetivos-lista li {
         font-size: 14px;
-    }
-
-    #SOBREMI .sobremi .titulo-seccion {
-        text-align: center;
-        font-size: 18px;
     }
 
     #SOBREMI .sobremi h2 {
@@ -706,42 +693,28 @@ footer a {
     }
 
     #SOBREMI .sobremi p {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 14px;
         text-align: center;
     }
 
     /* Reposicionar la imagen de Objetivos */
-    #SOBREMI .sobremi .contenedor-foto {
-        order: 1; /* Cambiar el orden de la imagen */
-        margin: 20px auto;
+    #SOBREMI .contenedor-foto {
         max-width: 100%;
+        margin: 0 auto 20px;
     }
 
-    /* Ajustes en la tabla de Servicios */
+    /* Ajustar la tabla de Servicios */
     #servicios table {
         width: 100%;
         overflow-x: auto;
         margin: 10px 0;
-        font-size: 12px;
+        font-size: 14px;
         border-collapse: collapse;
     }
 
     #servicios td, #servicios th {
-        padding: 8px;
-        font-size: 14px;
+        padding: 10px;
         border: 1px solid #ccc;
-    }
-
-    /* Ajuste de tamaño en iconos de servicios */
-    .icono {
-        width: 40px;
-        height: 40px;
-        margin: 0 auto;
-    }
-
-    .servicios-tag li {
-        margin-right: 5px;
     }
 
     /* Ajustes en el Portfolio */
@@ -750,20 +723,11 @@ footer a {
         margin: 20px 0;
     }
 
-    #portfolio .fila .proyecto {
-        width: 100%;
-        margin: 10px auto;
-    }
-
     #portfolio .fila .proyecto img {
         width: 100%;
         height: auto;
-        filter: grayscale(1);
         object-fit: cover;
-    }
-
-    #portfolio .fila .proyecto:hover img {
-        filter: grayscale(0);
+        filter: grayscale(1);
     }
 
     #portfolio .fila .proyecto .info {
@@ -782,7 +746,7 @@ footer a {
         opacity: 1;
     }
 
-    /* Ajustes en la Sección Contacto */
+    /* Ajustes en el Contacto */
     #contacto .contenedor-form .mitad input,
     #contacto .contenedor-form .mitad textarea {
         width: 100%;
@@ -812,5 +776,4 @@ footer a {
         font-size: 18px;
     }
 }
-  
 
