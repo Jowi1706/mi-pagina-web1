@@ -627,11 +627,16 @@ footer a {
 @media screen and (max-width: 768px) {
     /* General: Añadir márgenes a todo el contenido */
     body {
-        padding: 0 15px; /* Espaciado en los bordes */
+        padding: 0 20px; /* Añadir espacio a los bordes */
         font-size: 16px; /* Ajuste de tamaño de fuente */
     }
 
     /* Encabezado (inicio, objetivos, servicios, etc.) */
+    header {
+        width: 90%; /* Hacer el encabezado más estrecho */
+        margin: 0 auto;
+    }
+
     header nav ul {
         padding: 0;
         list-style: none;
@@ -676,12 +681,17 @@ footer a {
 
     #objetivos li {
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #objetivos img {
-        width: 100%;
+        width: 90%; /* Hacer que las imágenes de objetivos sean más grandes */
         height: auto;
         margin-top: 10px;
+        max-height: 250px; /* Limitar la altura máxima de las imágenes */
     }
 
     /* Ajustes a la tabla de Servicios de Sostenibilidad */
@@ -749,5 +759,15 @@ footer a {
     /* Mejorar los márgenes en las secciones */
     section {
         margin-bottom: 10px;
+    }
+
+    /* Ajustes adicionales para la sección de objetivos */
+    #objetivos ul {
+        grid-template-columns: 1fr; /* Cambiar a una columna para pantallas muy pequeñas */
+    }
+
+    #objetivos img {
+        width: 100%; /* Asegurar que las imágenes ocupen todo el espacio disponible */
+        max-height: none; /* Eliminar límite de altura */
     }
 }
